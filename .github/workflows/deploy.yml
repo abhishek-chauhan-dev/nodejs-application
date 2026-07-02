@@ -7,8 +7,6 @@ on:
 
 jobs:
   deploy:
-    env:
-      PATH: /home/ubuntu/nodejs-application
     runs-on: ubuntu-latest
 
     steps:
@@ -22,6 +20,6 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            cd ${{ env.PATH }}
+            cd /home/ubuntu/nodejs-application
             git pull
             docker-compose up -d --build
