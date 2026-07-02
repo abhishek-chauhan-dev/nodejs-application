@@ -20,4 +20,8 @@ jobs:
           username: ${{ vars.SERVER_USERNAME }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           port: 22
-          script: hostname
+          script: |
+            cd /home/ubuntu/nodejs-application
+            git pull
+            docker compose up -d --build
+        
