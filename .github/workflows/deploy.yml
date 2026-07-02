@@ -19,4 +19,4 @@ jobs:
           host: ${{ secrets.SERVER_IP }}
           username: ${{ vars.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_SSH_KEY }}
-          script: whoami
+          script: hostname
