@@ -7,7 +7,7 @@ on:
     
 jobs:
 
-  build and deploy:
+  build_and_push:
     
     env:
       DOCKERHUB_USERNAME: ${{ vars.DOCKERHUB_USERNAME }}
