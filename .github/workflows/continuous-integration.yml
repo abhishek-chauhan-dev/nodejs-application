@@ -50,5 +50,5 @@ jobs:
           git status
           git add Orchestration/dev/deployment.yml
           git commit -m "Successfully updated image tag in the deployment.yml file."
-          # git remote add origin https://${{ secrets.REPO_TOKEN }}@github.com/abhishek-chauhan-dev/nodejs-application.git
+          git remote set-url origin https://${{ secrets.REPO_TOKEN }}@github.com/abhishek-chauhan-dev/nodejs-application.git
           git push origin master
