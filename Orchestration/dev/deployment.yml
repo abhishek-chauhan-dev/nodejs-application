@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: node
-        image: abhishekchauhandev/node-app:1a3548e80b3bb5839144e71f415bfc83fd4441c2
+        image: abhishekchauhandev/node-app:cabac70c674efaf7ffa4a6994906af8b02faf4d3
         ports:
         - containerPort: 8080
         
