@@ -9,9 +9,6 @@ jobs:
 
   build_and_push:
     
-    env:
-      IMAGE_TAG: ${{ github.sha }}
-
     runs-on: ubuntu-latest
 
     steps:
@@ -44,4 +41,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ vars.DOCKERHUB_USERNAME }}/node-app:${IMAGE_TAG}
+          tags: ${{ vars.DOCKERHUB_USERNAME }}/node-app:${{ github.sha }}
