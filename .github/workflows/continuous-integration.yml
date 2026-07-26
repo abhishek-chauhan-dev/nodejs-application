@@ -52,4 +52,4 @@ jobs:
           git status
           git add .
           git commit -m "Successfully updated image tag in the deployment.yml file."
-          git push origin master
+          git push origin main
