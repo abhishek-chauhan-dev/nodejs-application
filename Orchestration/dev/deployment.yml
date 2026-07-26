@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: node
-        image: abhishekchauhandev/node-app:${{ github.sha }}
+        image: abhishekchauhandev/node-app:96b1084fc3a21757320e267aaeb8e0fbcdbbce94
         ports:
         - containerPort: 8080
         
