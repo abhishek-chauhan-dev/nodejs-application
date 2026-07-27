@@ -47,14 +47,13 @@ jobs:
 
           cd Kubernetes/Orchestration/dev
 
-          sed -i "s|image: ghcr.io/${{ github.repository_owner }}/node-app:.*|image: ghcr.io/${{ github.repository_owner }}/node-app:${{ github.sha }}|g" deployment.yaml
+          sed -i "s|image: ghcr.io/${{ github.repository_owner }}/node-app:.*|image: ghcr.io/${{ github.repository_owner }}/node-app:${{ github.sha }}|g" deployment.yml
 
-          cat deployment.yaml
+          cat deployment.yml
 
-          git add deployment.yaml
+          git add deployment.yml
           
           git commit -m "Update image with tag ${{ github.sha }}"
 
           git push https://${{ secrets.IMAGE_UPDATE_TOKEN }}@github.com/${{ github.repository_owner }}/Kubernetes.git main
 
-          
